@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Budi {
+public class Man {
     public static void main(String[] args) {
         // import
         Scanner scanner = new Scanner(System.in);
