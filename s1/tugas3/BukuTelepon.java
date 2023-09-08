@@ -1,5 +1,8 @@
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 
 class Kontak {
     private String nama;
@@ -16,6 +19,18 @@ class Kontak {
 
     public String getNama() {
         return nama;
+    }
+
+    public String getEmail (){
+        return email;
+    }
+
+    public String getAlamat () {
+        return alamat;
+    }
+
+    public String getNomor () {
+        return nomor;
     }
 
     @Override
@@ -39,7 +54,8 @@ public class BukuTelepon {
             System.out.println("[1] Semua  Kontak");
             System.out.println("[2] Buat   Kontak");
             System.out.println("[3] Hapus  Kontak");
-            System.out.println("[4] keluar Kontak");
+            System.out.println("[4] Keluar Kontak");
+            System.out.println("[5] Simpan Kontak");
             System.out.println("==================================");
             System.out.println("Pilih salah satu :");
             System.out.println("==================================");
@@ -100,7 +116,15 @@ public class BukuTelepon {
                 System.out.println("              THANKS              ");
                 System.out.println("==================================");
                 return;
-            }else{
+            }else if (pilihan == 5){
+                saveToFile(daftarKontak);
+
+                System.out.println("==================================");
+                System.out.println("             SUCCESS              ");
+                System.out.println("==================================");
+
+                System.out.print("\n\n");
+            }  else{
                 System.out.println("==================================");
                 System.out.println("             FAILED              ");
                 System.out.println("==================================");
@@ -109,4 +133,19 @@ public class BukuTelepon {
 
     }
 
+    private static void saveToFile(ArrayList<Kontak> daftarKontak) {
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter("kontak.txt"));
+
+            for (Kontak kontak : daftarKontak) {
+                String line = "nama  :" + kontak.getNama() + "\nemail :" + kontak.getEmail() + "\nalamat:" + kontak.getAlamat() + "\nnomor :" + kontak.getNomor() + "\n" + "==================================\n" ;;
+                writer.write(line);
+                writer.newLine();
+            }
+
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
