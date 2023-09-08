@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Kalkulator {
     public static void main (String[] args){
         Scanner scanner = new Scanner(System.in);
-        boolean loop = true,loop2 = true,loop3 = true;
+        boolean loop = true,loop2 = true;
         int pilih = 0;
         String pilih2 ;
         double angka1 = 0,angka2 = 0,hasil = 0;
