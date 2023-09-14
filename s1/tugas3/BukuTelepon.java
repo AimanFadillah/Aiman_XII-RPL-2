@@ -115,6 +115,7 @@ public class BukuTelepon {
 
                 System.out.print("\n\n");
             }else if (pilihan == 4){
+
                 System.out.println("==================================");
                 System.out.println("              THANKS              ");
                 System.out.println("==================================");
@@ -132,6 +133,8 @@ public class BukuTelepon {
                 System.out.println("             FAILED              ");
                 System.out.println("==================================");
             }
+
+            scanner.close();
         }
 
     }
