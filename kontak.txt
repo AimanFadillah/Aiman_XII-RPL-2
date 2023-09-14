@@ -1,0 +1,12 @@
+nama  :aiman
+email :man@gmail.com
+alamat:l
+nomor :susmita
+==================================
+
+nama  :aiman
+email :man@gmail.com
+alamat:susmita
+nomor :0896715225128
+==================================
+
