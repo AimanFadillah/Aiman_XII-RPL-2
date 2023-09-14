@@ -47,7 +47,7 @@ public class BukuTelepon {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         ArrayList<Kontak> daftarKontak = new ArrayList<>();
-        // loadFromFile(daftarKontak);
+        loadFromFile(daftarKontak);
         boolean loop = true;
 
         while (loop) {
