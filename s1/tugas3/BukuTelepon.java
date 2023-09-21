@@ -47,7 +47,7 @@ public class BukuTelepon {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         ArrayList<Kontak> daftarKontak = new ArrayList<>();
-        loadFromFile(daftarKontak);
+        loadFromFile(daftarKontak); 
         boolean loop = true;
 
         while (loop) {
@@ -89,6 +89,7 @@ public class BukuTelepon {
 
                 Kontak baru = new Kontak(nama, email, alamat, nomor);
                 daftarKontak.add(baru);
+                saveToFile(daftarKontak);
                 System.out.println("==================================");
                 System.out.println("             SUCCESS              ");
                 System.out.println("==================================");
@@ -108,7 +109,7 @@ public class BukuTelepon {
                         break;
                     }
                 }
-
+                saveToFile(daftarKontak);
                 System.out.println("==================================");
                 System.out.println("             SUCCESS              ");
                 System.out.println("==================================");

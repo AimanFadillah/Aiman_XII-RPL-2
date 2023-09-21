@@ -1,0 +1,6 @@
+nama  :aiman
+email :geming
+alamat:asdas
+nomor :das
+==================================
+
